@@ -33,8 +33,8 @@ class TaskList extends Elements {
       ],
       subTxt: "CHANGE",
       btnArr: [
-        this.Btn({ handleClick: this.handleDelete, btnTxt: "X" }, value),
-        this.Btn({ handleClick: this.handleEditForm, btnTxt: "EDIT" }, value),
+        { handleClick: this.handleDelete, btnTxt: "X" },
+        { handleClick: this.handleEditForm, btnTxt: "EDIT" },
       ],
     };
     this.makeList = this.makeList.bind(this);

@@ -1,6 +1,5 @@
 class UI {
     constructor(elem){
-        super()
         this.elem = elem
         this.state = {}
         this.elements = []

@@ -25,7 +25,7 @@ Elements.prototype.Form = function (props) {
   subBtn.setAttribute("type", "submit");
   subBtn.innerText = props.subTxt;
   form.append(subBtn);
-  div.append(form);
+  section.append(form);
   return section;
 };
 Elements.prototype.Header = function (props) {
@@ -44,7 +44,7 @@ Elements.prototype.List = function (props) {
     } else {
       li.innerText = todo.task;
       if (props.btnArr) {
-        btnArr.forEach((btn) => li.append(btn(props, todo)));
+        props.btnArr.forEach((btn) => li.append(this.Btn(btn, todo)));
       }
     }
     ul.append(li);

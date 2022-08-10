@@ -1,6 +1,6 @@
-import UI from "./library/UI.js"
-
+import TodoList from "./TodoList.js"
 
 const root = document.getElementById("root")
 
-console.log(new UI(root))
+new TodoList(root).render()
+
