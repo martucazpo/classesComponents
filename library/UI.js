@@ -18,7 +18,9 @@ UI.prototype.unsetElements = function(){
     return this
 }
 UI.prototype.renderElements = function(){
+    this.elem.innerHTML = ""
     this.elements.forEach(element => this.elem.append(element))
+    this.unsetElements()
     return this
 }
 
