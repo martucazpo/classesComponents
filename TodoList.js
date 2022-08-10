@@ -85,6 +85,7 @@ class TodoList extends UI {
         this.setElement(new AddTodoForm(this.elem,this.state,this.handleAddTask,this.handleInput).renderForm())
         this.setElement(new TaskList(this.elem,this.state,this.handleInput,this.handleDelete,this.handleEditForm,this.handleEdit).makeList())
         this.renderElements()
+        return this
     }
 }
 
