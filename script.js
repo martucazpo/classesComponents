@@ -1,6 +1,15 @@
 import TodoList from "./TodoList.js"
 
-const root = document.getElementById("root")
+class TodoElement extends HTMLElement{
+    constructor(){
+        super()
+        const shadow = this.attachShadow({mode: 'open'});
+        new TodoList(shadow).render()
+    }
+    
+}
 
-new TodoList(root).render()
+customElements.define("todo-element", TodoElement)
+
+
 
